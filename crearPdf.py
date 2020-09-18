@@ -1,18 +1,18 @@
 from reportlab.pdfgen import canvas
+from reportlab.platypus import (BaseDocTemplate, Frame, Paragraph, 
+                    NextPageTemplate, PageBreak, PageTemplate)
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.lib.units import inch
+from reportlab.lib.pagesizes import A4
 c=canvas.Canvas("hola mundo.pdf")
-
+def encabezado(canvas,doc):
+    canvas.saveState()
+    canvas.setFont('Times-Roman',9)
+    canvas.drawImage("nomoLogo.png", 410, 750, 150, 70)
+    canvas.restoreState()
 # Dibujamos una imagen (IMAGEN, X,Y, WIDTH, HEIGH)
-c.drawImage("argon_candidato.jpg", 30, 750, 90, 70)
-#c.showPage()
-
-c.drawString(100,730, "HOLA MUNDO")
-
-c.setLineWidth(.3)
-c.setFont('Helvetica', 12)
- 
-c.drawString(450,785,"AGRON & NOMO")
-
-  
-c.line(30,765,550,765)
+c.drawImage("nomoLogo.png", 30, 450, 150, 70)
+frameN = Frame(inch, inch, 451, 697, id='normal')
+PTUnaColumna = PageTemplate(id='UnaColumna', frames=frameN, onPage=encabezado)
 
 c.save()

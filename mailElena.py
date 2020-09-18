@@ -1,12 +1,12 @@
 import smtplib
 
-from_addr = 'elenamontesano17@gmail.com'
+from_addr = 'nomoavisos@gmail.com'
 to = 'elenamontesanomartin@gmail.com'
 message = 'This is a test Email from python'
 
 # Reemplaza estos valores con tus credenciales de Google Mail
-username = 'elenamontesano17@gmail.com'
-password = '*********'
+username = 'nomoavisos@gmail.com'
+password = 'Subtropical4ever'
 
 server = smtplib.SMTP('smtp.gmail.com:587')
 server.starttls()

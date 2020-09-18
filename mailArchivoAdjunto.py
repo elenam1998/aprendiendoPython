@@ -5,7 +5,7 @@ from email.mime.base import MIMEBase
 from email import encoders
  
 # Iniciamos los parametros del script
-remitente = 'elenamontesano17@gmail.com'
+remitente = 'nomoavisos@gmail.com'
 destinatarios = ['elenamontesanomartin@gmail.com']
 asunto = '[RPI] Correo de prueba'
 cuerpo = 'Este es el contenido del mensaje'
@@ -44,7 +44,7 @@ sesion_smtp = smtplib.SMTP('smtp.gmail.com', 587)
 sesion_smtp.starttls()
 
 # Iniciamos sesion en el servidor
-sesion_smtp.login('elenamontesano17@gmail.com','Sometimes')
+sesion_smtp.login('nomoavisos@gmail.com','Subtropical4ever')
 
 # Convertimos el objeto mensaje a texto
 texto = mensaje.as_string()
